@@ -48,7 +48,7 @@ p {
 .body__button {
   background: #34547a;
   line-height: 26px;
-  letter-spacing: 0.1em;
+  letter-spacing: 1.6px;
   text-align: center;
   text-transform: uppercase;
   color: #ffffff;
@@ -58,12 +58,7 @@ p {
   user-select: none;
 }
 
-.body__button:active {
-  box-shadow: inset 0px 0px 0px 2px rgb(0 0 0 / 49%);
-  transition: 0.2s;
-  transform: scale(0.95, 0.95);
-}
-
+.body__button:active,
 .body__button:focus-visible {
   box-shadow: inset 0px 0px 0px 2px rgb(0 0 0 / 49%);
   transition: 0.2s;
@@ -80,7 +75,6 @@ p {
 
 .header__logo {
   max-width: 96px;
-  max-height: 60px;
   user-select: none;
 }
 
@@ -101,7 +95,7 @@ p {
   color: rgba(0, 0, 0, 1);
   text-wrap: nowrap;
   user-select: none;
-  letter-spacing: 0.1em;
+  letter-spacing: 1.6px;
   text-align: left;
 }
 
@@ -143,24 +137,22 @@ p {
 }
 
 .hero__title-container {
+  max-width: 540px;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: flex-start;
 }
 
 .hero__title {
-  font-family: Roboto;
   font-size: 48px;
   line-height: 78.75px;
   text-align: left;
   margin-bottom: 60px;
 }
 
-.hero__text {
+.hero__text { 
   text-align: left;
-  margin: 0;
-  max-width: 540px;
+  margin: 0; 
   margin-bottom: 60px;
 }
 
@@ -208,14 +200,12 @@ p {
 
 .numbers__container {
   display: flex;
-  align-items: center;
 }
 
 .numbers__content {
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  padding-left: 20px;
+  margin-left: 20px;
 }
 
 .numbers__title {
@@ -226,7 +216,6 @@ p {
 }
 
 .numbers__text {
-  font-size: 16px;
   line-height: 26px;
   text-align: left;
   color: rgba(255, 255, 255, 1);
@@ -276,8 +265,8 @@ p {
   display: block;
   max-height: 450px;
   max-width: 555px;
-  width: 100%;
-  height: 100%;
+
+
 }
 
 .skills__name {
@@ -293,7 +282,6 @@ p {
 
 .video {
   background: rgba(238, 239, 241, 1);
-  margin-bottom: 28px;
 }
 
 .video__wrapper {
@@ -326,8 +314,6 @@ p {
 .video__poster {
   max-width: 1100px;
   max-height: 600px;
-  width: 100%;
-  height: 100%;
 }
 
 .video__image-button {
@@ -349,6 +335,7 @@ p {
 /* -- PROJECTS -- */
 
 .projects {
+  padding-top: 28px;
   display: flex;
   margin-bottom: 28px;
   align-items: center;
@@ -368,8 +355,6 @@ p {
   gap: 0px;
   margin: 0;
   padding: 0;
-  width: 100%;
-  height: 100%;
 }
 
 .projects__item {
@@ -425,7 +410,7 @@ p {
 
 /* -- ORDER -- */
 
-.oreder {
+.order {
   background: rgba(238, 239, 241, 1);
 }
 
@@ -437,7 +422,6 @@ p {
   display: flex;
   align-items: center;
   flex-direction: column;
-  align-content: center;
 }
 
 .order__title {
@@ -469,7 +453,6 @@ p {
   display: flex;
   align-items: center;
   flex-direction: column;
-  align-content: center;
 }
 
 .order-message {
@@ -497,7 +480,7 @@ p {
   justify-content: space-between;
 }
 
-.footer__autor-name {
+.footer__author-name {
   font-size: 21px;
   line-height: 24px;
   text-align: left;
@@ -531,10 +514,7 @@ p {
   }
 
   .text {
-    font-size: 16px;
-    line-height: 26.25px;
     margin: 0;
-    padding: 0;
     width: 100%;
     max-width: 1000px;
     font-weight: 400;
@@ -545,9 +525,8 @@ p {
     font-size: 32px;
     line-height: 37.5px;
     font-weight: 500;
-    margin-bottom: 50px;
-    padding: 0;
-    margin: 0;
+    margin: 0 0 50;
+    padding: 0;  
     width: 100%;
   }
 
@@ -584,8 +563,6 @@ p {
   .hero__image {
     max-width: 275px;
     max-height: 188px;
-    width: 100%;
-    height: 100%;
   }
 
   .hero__image-container {
@@ -597,8 +574,7 @@ p {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 67px;
-    padding-bottom: 95px;
+    padding: 67px 0 95px 0;   
   }
 
   .hero__title {
@@ -608,7 +584,6 @@ p {
   }
 
   .hero__text {
-    font-size: 16px;
     font-weight: 400;
     line-height: 19.2px;
     text-align: center;
@@ -636,10 +611,8 @@ p {
   .about-me__container {
     display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 44px;
-    padding-top: 91px;
-    padding-bottom: 82px;
+    padding: 91px 0 82px 0;
   }
 
   /*-- /@ABOUT-ME -- */
@@ -647,11 +620,15 @@ p {
   /*-- @NUMBERS --*/
   .numbers__list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    margin-left: 9px;
+    grid-template-columns: repeat(2, 1fr);
     justify-items: center;
     align-items: center;
     justify-content: center;
+  }
+
+  .numbers__container {
+    align-items: center;
+    
   }
 
   .numbers__content {
@@ -771,6 +748,7 @@ p {
 
   .order__container {
     align-items: stretch;
+    padding: 0 10px;
   }
 
   .order__title {
